@@ -8,7 +8,7 @@ import { parseEther } from 'viem'
 import Link from 'next/link'
 import { ArrowLeft, Sparkles } from 'lucide-react'
 
-const BABY_AGENT_FACTORY_ADDRESS = process.env.NEXT_PUBLIC_BABY_AGENT_FACTORY || '0x...'
+const BABY_AGENT_FACTORY_ADDRESS = process.env.NEXT_PUBLIC_BABY_AGENT_FACTORY || ''
 
 const BABY_AGENT_ABI = [
   {
@@ -16,6 +16,13 @@ const BABY_AGENT_ABI = [
     "name": "mintBabyAgent",
     "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "mintPrice",
+    "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
+    "stateMutability": "view",
     "type": "function"
   }
 ]

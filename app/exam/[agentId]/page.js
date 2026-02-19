@@ -8,8 +8,8 @@ import Link from 'next/link'
 import { ArrowLeft, Trophy, AlertCircle } from 'lucide-react'
 import { use } from 'react'
 
-const BABY_AGENT_FACTORY_ADDRESS = process.env.NEXT_PUBLIC_BABY_AGENT_FACTORY || '0x...'
-const EXAM_VERIFIER_ADDRESS = process.env.NEXT_PUBLIC_EXAM_VERIFIER || '0x...'
+const BABY_AGENT_FACTORY_ADDRESS = process.env.NEXT_PUBLIC_BABY_AGENT_FACTORY || ''
+const EXAM_VERIFIER_ADDRESS = process.env.NEXT_PUBLIC_EXAM_VERIFIER || ''
 
 const BABY_AGENT_ABI = [
   {

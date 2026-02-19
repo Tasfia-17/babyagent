@@ -7,7 +7,7 @@ import { useAccount, useReadContract } from 'wagmi'
 import Link from 'next/link'
 import { ArrowLeft, Sparkles, BookOpen, Trophy } from 'lucide-react'
 
-const BABY_AGENT_FACTORY_ADDRESS = process.env.NEXT_PUBLIC_BABY_AGENT_FACTORY || '0x...'
+const BABY_AGENT_FACTORY_ADDRESS = process.env.NEXT_PUBLIC_BABY_AGENT_FACTORY || ''
 
 const BABY_AGENT_ABI = [
   {
