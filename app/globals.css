@@ -2,37 +2,147 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Bubblegum+Sans&display=swap');
 
 * {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Fredoka', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #B4D4FF 0%, #FFB4D1 100%);
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(173, 216, 230, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(255, 253, 208, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #FFE5EC 0%, #FFF0F5 25%, #E0F4FF 50%, #F0E6FF 75%, #FFE5F1 100%);
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle, rgba(255, 182, 193, 0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(173, 216, 230, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px;
+  background-position: 0 0, 40px 40px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @layer components {
   .btn-cute {
-    @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg;
+    @apply px-8 py-4 rounded-full font-bold text-lg transition-all duration-200 transform 
+           shadow-[0_8px_0_rgba(0,0,0,0.1)] active:shadow-[0_2px_0_rgba(0,0,0,0.1)] 
+           active:translate-y-1 relative overflow-hidden;
+  }
+  
+  .btn-cute::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-cute:hover::before {
+    left: 100%;
   }
   
   .btn-primary {
-    @apply btn-cute bg-pastel-pink text-white hover:bg-pink-400;
+    @apply btn-cute bg-gradient-to-br from-pink-400 via-pink-500 to-rose-500 text-white
+           hover:from-pink-500 hover:via-pink-600 hover:to-rose-600
+           border-4 border-pink-300;
   }
   
   .btn-secondary {
-    @apply btn-cute bg-pastel-blue text-white hover:bg-blue-400;
+    @apply btn-cute bg-gradient-to-br from-blue-400 via-sky-500 to-cyan-500 text-white
+           hover:from-blue-500 hover:via-sky-600 hover:to-cyan-600
+           border-4 border-blue-300;
+  }
+  
+  .btn-success {
+    @apply btn-cute bg-gradient-to-br from-green-400 via-emerald-500 to-teal-500 text-white
+           hover:from-green-500 hover:via-emerald-600 hover:to-teal-600
+           border-4 border-green-300;
   }
   
   .card-cute {
-    @apply bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-xl border-4 border-white;
+    @apply bg-white/95 backdrop-blur-xl rounded-[2rem] p-8 
+           shadow-[0_20px_60px_rgba(0,0,0,0.15)] 
+           border-4 border-white/50
+           relative overflow-hidden;
+  }
+  
+  .card-cute::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes shimmer {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10%, 10%); }
+  }
+  
+  .card-nursery {
+    @apply card-cute bg-gradient-to-br from-pink-50 to-rose-50 border-pink-200;
+  }
+  
+  .card-preschool {
+    @apply card-cute bg-gradient-to-br from-blue-50 to-sky-50 border-blue-200;
+  }
+  
+  .card-kindergarten {
+    @apply card-cute bg-gradient-to-br from-purple-50 to-violet-50 border-purple-200;
+  }
+  
+  .card-graduated {
+    @apply card-cute bg-gradient-to-br from-yellow-50 to-amber-50 border-yellow-200;
   }
   
   .pixel-border {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+  }
+  
+  .text-cute {
+    @apply font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 
+           bg-clip-text text-transparent;
+  }
+  
+  .badge-cute {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm
+           shadow-lg border-2 backdrop-blur-sm;
+  }
+  
+  .badge-nursery {
+    @apply badge-cute bg-pink-100 text-pink-700 border-pink-300;
+  }
+  
+  .badge-preschool {
+    @apply badge-cute bg-blue-100 text-blue-700 border-blue-300;
+  }
+  
+  .badge-kindergarten {
+    @apply badge-cute bg-purple-100 text-purple-700 border-purple-300;
+  }
+  
+  .badge-graduated {
+    @apply badge-cute bg-yellow-100 text-yellow-700 border-yellow-300;
   }
 }
