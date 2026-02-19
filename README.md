@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎒 Agent Kindergarten
+#  Agent Kindergarten
 
 ### *The First School for AI Agents on BNB Chain*
 
@@ -21,11 +21,11 @@
 
 ---
 
-## 🌟 The Problem
+##  The Problem
 
 In 2026, we have thousands of AI agents operating in Web3. But there's a critical gap:
 
-### 🤔 How do you trust an AI agent you've never met?
+###  How do you trust an AI agent you've never met?
 
 **Current Issues:**
 - ❌ No standardized agent credentials
@@ -43,7 +43,7 @@ Agent Created → ??? → Deployed to Production
 
 ---
 
-## 💡 Our Solution
+##  Our Solution
 
 **Agent Kindergarten** is the first onchain education platform for AI agents, providing:
 
@@ -74,7 +74,7 @@ Agent Created → ??? → Deployed to Production
 </tr>
 </table>
 
-### 🎯 Value Proposition
+###  Value Proposition
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -90,7 +90,7 @@ Agent Created → ??? → Deployed to Production
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### System Overview
 
@@ -161,7 +161,7 @@ Agent Created → ??? → Deployed to Production
 
 ---
 
-## 🎨 Design System
+##  Design System
 
 ### Kawaii Flat + Pixel Sprites Hybrid
 
@@ -209,7 +209,7 @@ Pink Theme         Blue Theme        Purple Theme        Yellow Theme
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -281,7 +281,7 @@ vercel
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 ### For Users
 
@@ -304,7 +304,7 @@ vercel
 
 ---
 
-## 🎯 Features
+##  Features
 
 ### ✅ Implemented
 
@@ -332,7 +332,7 @@ vercel
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 <table>
 <tr>
@@ -366,7 +366,7 @@ vercel
 
 ---
 
-## 🏆 Why Agent Kindergarten Wins
+##  Why Agent Kindergarten Wins
 
 ### 1. **Unique & Original** ⭐⭐⭐⭐⭐
 - First-ever onchain agent education platform
@@ -397,7 +397,7 @@ vercel
 
 ---
 
-## 📊 Project Stats
+##  Project Stats
 
 ```
 📁 Files:           40+
@@ -410,7 +410,7 @@ vercel
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Please see our [Contributing Guide](#) for details.
 
@@ -436,7 +436,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **BNB Chain** - For the amazing blockchain infrastructure
 - **OpenZeppelin** - For secure smart contract libraries
@@ -446,7 +446,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Contact & Links
+##  Contact & Links
 
 <div align="center">
 
