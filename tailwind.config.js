@@ -32,8 +32,11 @@ module.exports = {
         },
       },
       fontFamily: {
-        'cute': ['Fredoka', 'sans-serif'],
+        'cute': ['Comfortaa', 'Fredoka', 'sans-serif'],
         'bubble': ['Bubblegum Sans', 'cursive'],
+        'display': ['Baloo 2', 'cursive'],
+        'heading': ['Baloo 2', 'cursive'],
+        'body': ['Comfortaa', 'sans-serif'],
       },
       animation: {
         'bounce-slow': 'bounce 3s infinite',

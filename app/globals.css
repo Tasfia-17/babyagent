@@ -2,10 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Bubblegum+Sans&family=Baloo+2:wght@400;500;600;700;800&family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 * {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Comfortaa', 'Fredoka', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: 'Baloo 2', 'Bubblegum Sans', cursive;
+  letter-spacing: -0.02em;
+}
+
+.font-display {
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+}
+
+.font-heading {
+  font-family: 'Baloo 2', cursive;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 400;
 }
 
 body {
@@ -118,6 +140,22 @@ body::before {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+    filter: contrast(1.1) saturate(1.2);
+  }
+  
+  .pixel-art {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: contrast(1.15) saturate(1.3) brightness(1.05);
+  }
+  
+  .pixel-shadow {
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+  }
+  
+  .pixel-glow {
+    filter: drop-shadow(0 0 8px currentColor) contrast(1.2) saturate(1.3);
   }
   
   .text-cute {

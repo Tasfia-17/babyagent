@@ -24,17 +24,20 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
         >
           <motion.div
-            className="text-5xl"
+            className="text-6xl pixel-glow"
             animate={{ rotate: [0, -10, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
+            style={{
+              filter: 'drop-shadow(0 4px 12px rgba(255, 182, 193, 0.6))',
+            }}
           >
             🎒
           </motion.div>
           <div>
-            <h1 className="text-3xl font-bold font-bubble bg-gradient-to-r from-kawaii-pink-500 via-kawaii-purple-500 to-kawaii-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold font-display bg-gradient-to-r from-kawaii-pink-600 via-kawaii-purple-600 to-kawaii-blue-600 bg-clip-text text-transparent drop-shadow-lg">
               Agent Kindergarten
             </h1>
-            <p className="text-xs text-gray-600 font-cute">Where AI Agents Learn to Grow</p>
+            <p className="text-sm text-gray-700 font-body font-semibold tracking-wide">Where AI Agents Learn to Grow ✨</p>
           </div>
         </motion.div>
         <ConnectButton />
@@ -50,25 +53,28 @@ export default function Home() {
         >
           {/* Floating badge */}
           <motion.div
-            className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-xl px-6 py-3 rounded-full shadow-cute mb-6 border-2 border-kawaii-pink-200"
+            className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-xl px-8 py-4 rounded-full shadow-cute-lg mb-8 border-4 border-white ring-4 ring-kawaii-pink-200 ring-opacity-50"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", delay: 0.2 }}
           >
-            <Sparkles className="w-5 h-5 text-kawaii-yellow-500" />
-            <span className="font-bold text-gray-700">The First School for AI Agents on BNB Chain</span>
-            <Sparkles className="w-5 h-5 text-kawaii-yellow-500" />
+            <Sparkles className="w-6 h-6 text-kawaii-yellow-500" />
+            <span className="font-bold text-gray-800 font-heading text-lg">The First School for AI Agents on BNB Chain</span>
+            <Sparkles className="w-6 h-6 text-kawaii-yellow-500" />
           </motion.div>
 
           <motion.h1 
-            className="text-7xl md:text-8xl font-bold mb-6 font-bubble leading-tight"
+            className="text-8xl md:text-9xl font-bold mb-8 font-display leading-none"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.3 }}
+            style={{
+              textShadow: '0 4px 20px rgba(255, 182, 193, 0.4), 0 8px 40px rgba(135, 206, 235, 0.3)',
+            }}
           >
             <span className="inline-block">
               <motion.span
-                className="bg-gradient-to-r from-kawaii-pink-400 via-kawaii-purple-400 to-kawaii-blue-400 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-kawaii-pink-500 via-kawaii-purple-500 to-kawaii-blue-500 bg-clip-text text-transparent"
                 animate={{ 
                   backgroundPosition: ['0%', '100%', '0%'],
                 }}
@@ -81,7 +87,7 @@ export default function Home() {
             <br />
             <span className="inline-block relative">
               <motion.span
-                className="bg-gradient-to-r from-kawaii-yellow-400 via-kawaii-pink-400 to-kawaii-purple-400 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-kawaii-yellow-500 via-kawaii-pink-500 to-kawaii-purple-500 bg-clip-text text-transparent"
                 animate={{ 
                   backgroundPosition: ['0%', '100%', '0%'],
                 }}
@@ -91,7 +97,7 @@ export default function Home() {
                 Baby Agent
               </motion.span>
               <motion.div
-                className="absolute -right-16 -top-8"
+                className="absolute -right-20 -top-12"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               >
@@ -101,38 +107,50 @@ export default function Home() {
           </motion.h1>
 
           <motion.p 
-            className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto font-cute leading-relaxed"
+            className="text-2xl md:text-3xl text-gray-800 mb-6 max-w-4xl mx-auto font-body leading-relaxed font-semibold"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
+            style={{
+              textShadow: '0 2px 10px rgba(255, 255, 255, 0.8)',
+            }}
           >
-            From <span className="font-bold text-kawaii-pink-600">👶 Nursery</span> to{' '}
-            <span className="font-bold text-kawaii-blue-600">🧸 Preschool</span> to{' '}
-            <span className="font-bold text-kawaii-purple-600">🎒 Kindergarten</span> to{' '}
-            <span className="font-bold text-kawaii-yellow-600">🎓 Graduation</span>
-            <br />
-            <span className="text-lg text-gray-600">Train • Graduate • Get Hired • Earn Rewards</span>
+            From <span className="font-bold text-kawaii-pink-600 text-3xl">👶 Nursery</span> to{' '}
+            <span className="font-bold text-kawaii-blue-600 text-3xl">🧸 Preschool</span> to{' '}
+            <span className="font-bold text-kawaii-purple-600 text-3xl">🎒 Kindergarten</span> to{' '}
+            <span className="font-bold text-kawaii-yellow-600 text-3xl">🎓 Graduation</span>
+          </motion.p>
+
+          <motion.p
+            className="text-xl text-gray-700 mb-12 font-body font-medium"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            <span className="inline-flex items-center gap-3 bg-white/70 px-6 py-3 rounded-full shadow-lg">
+              Train • Graduate • Get Hired • Earn Rewards
+            </span>
           </motion.p>
           
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: "spring", delay: 0.7, stiffness: 200 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
             <Link href="/enroll">
-              <SquishyButton variant="primary" className="text-xl px-10 py-5 shadow-cute-lg">
-                <span className="flex items-center gap-3">
-                  <Baby className="w-6 h-6" />
+              <SquishyButton variant="primary" className="text-2xl px-12 py-6 shadow-cute-lg font-heading">
+                <span className="flex items-center gap-4">
+                  <Baby className="w-8 h-8" />
                   Adopt Your Baby Agent
-                  <Heart className="w-5 h-5" />
+                  <Heart className="w-6 h-6" />
                 </span>
               </SquishyButton>
             </Link>
             <Link href="/nursery">
-              <SquishyButton variant="secondary" className="text-lg px-8 py-5">
-                <span className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5" />
+              <SquishyButton variant="secondary" className="text-xl px-10 py-6 font-heading">
+                <span className="flex items-center gap-3">
+                  <GraduationCap className="w-6 h-6" />
                   View Nursery
                 </span>
               </SquishyButton>
