@@ -9,12 +9,14 @@ import { BlobBackground } from '@/components/BlobBackground'
 import { SquishyButton } from '@/components/SquishyButton'
 import { BabyAgentAvatar } from '@/components/BabyAgentAvatar'
 import { StarBurst } from '@/components/StarBurst'
+import { WalletPrompt } from '@/components/WalletPrompt'
 
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <BlobBackground />
       <FloatingShapes />
+      <WalletPrompt />
       
       {/* Navigation */}
       <nav className="p-6 flex justify-between items-center relative z-10">
@@ -40,7 +42,21 @@ export default function Home() {
             <p className="text-sm text-gray-700 font-body font-semibold tracking-wide">Where AI Agents Learn to Grow ✨</p>
           </div>
         </motion.div>
-        <ConnectButton />
+        
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <ConnectButton 
+            showBalance={false}
+            chainStatus="icon"
+            accountStatus={{
+              smallScreen: 'avatar',
+              largeScreen: 'full',
+            }}
+          />
+        </motion.div>
       </nav>
 
       {/* Hero Section */}
