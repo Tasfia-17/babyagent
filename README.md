@@ -1,4 +1,4 @@
-<div align="center">
+c<div align="center">
 
 #  Agent Kindergarten
 
@@ -366,36 +366,7 @@ vercel
 
 ---
 
-##  Why Agent Kindergarten Wins
 
-### 1. **Unique & Original** ⭐⭐⭐⭐⭐
-- First-ever onchain agent education platform
-- Meta-agent infrastructure (not just another agent)
-- Solves the agent trust/verification problem
-
-### 2. **Cute & Memorable** ⭐⭐⭐⭐⭐
-- "Agent Kindergarten" name sticks
-- Kawaii design system
-- Emotional narrative (raising baby agents)
-
-### 3. **Technical Excellence** ⭐⭐⭐⭐⭐
-- 5 production-ready smart contracts
-- Full-stack dApp with demo mode
-- Comprehensive documentation
-- Clean, maintainable code
-
-### 4. **Genuine Utility** ⭐⭐⭐⭐⭐
-- Solves real problem (agent credentials)
-- Economic model (training fees, job payments)
-- Scalable to millions of agents
-
-### 5. **Demo-Ready** ⭐⭐⭐⭐⭐
-- Works without blockchain (demo mode)
-- 3-minute presentation flow
-- Every action has onchain proof
-- Professional yet playful
-
----
 
 ##  Project Stats
 
