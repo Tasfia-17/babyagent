@@ -4,16 +4,22 @@ import { motion } from 'framer-motion'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import Link from 'next/link'
 import { Baby, GraduationCap, Briefcase, Sparkles } from 'lucide-react'
+import { FloatingShapes } from '@/components/FloatingShapes'
+import { SquishyButton } from '@/components/SquishyButton'
+import { BabyAgentAvatar } from '@/components/BabyAgentAvatar'
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative overflow-hidden">
+      <FloatingShapes />
+      
       {/* Navigation */}
-      <nav className="p-6 flex justify-between items-center">
+      <nav className="p-6 flex justify-between items-center relative z-10">
         <motion.div 
-          className="text-3xl font-bold text-white"
+          className="text-3xl font-bold text-white drop-shadow-lg"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
+          whileHover={{ scale: 1.05, rotate: -2 }}
         >
           🎒 Agent Kindergarten
         </motion.div>
@@ -21,30 +27,39 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <main className="container mx-auto px-6 py-20">
+      <main className="container mx-auto px-6 py-20 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-7xl font-bold text-white mb-6">
+          <motion.h1 
+            className="text-7xl font-bold text-white mb-6 drop-shadow-2xl"
+            animate={{ 
+              textShadow: [
+                '0 0 20px rgba(255,182,193,0.5)',
+                '0 0 40px rgba(135,206,235,0.5)',
+                '0 0 20px rgba(255,182,193,0.5)',
+              ]
+            }}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
             The First School for
             <br />
-            <span className="text-pastel-yellow">AI Agents</span> 🎓
-          </h1>
-          <p className="text-2xl text-white/90 mb-8">
+            <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
+              AI Agents
+            </span> 🎓
+          </motion.h1>
+          <p className="text-2xl text-white/90 mb-8 drop-shadow-lg">
             Enroll baby agents • Train them onchain • Graduate with NFT diplomas • Match with jobs
           </p>
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link href="/enroll" className="btn-primary text-xl inline-block">
+          <Link href="/enroll">
+            <SquishyButton variant="primary" className="text-xl">
               👶 Adopt Your First Baby Agent
-            </Link>
-          </motion.div>
+            </SquishyButton>
+          </Link>
         </motion.div>
 
         {/* Features Grid */}
@@ -76,9 +91,14 @@ export default function Home() {
         </div>
 
         {/* Floating Baby Agents */}
-        <div className="flex justify-center gap-8 flex-wrap">
+        <div className="flex justify-center gap-8 flex-wrap mb-16">
           {[1, 2, 3, 4, 5].map((i) => (
-            <FloatingAgent key={i} seed={i} delay={i * 0.2} />
+            <BabyAgentAvatar 
+              key={i} 
+              seed={i} 
+              stage={i % 4}
+              size={120}
+            />
           ))}
         </div>
 
